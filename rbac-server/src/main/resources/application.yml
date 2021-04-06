@@ -1,4 +1,5 @@
 
+#数据库连接配置
 spring:
   datasource:
     username: root
@@ -8,3 +9,10 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
 server:
   port: 8088
+
+#mybatis配置
+mybatis:
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+  type-aliases-package: com.rbac.server.pojo
+  configuration:
+    map-underscore-to-camel-case: false
